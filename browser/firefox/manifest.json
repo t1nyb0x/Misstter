@@ -1,13 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Misstter (fork)",
-  "description": "Misstter (fork)",
-  "version": "1.1.0",
+  "name": "Misstter (t1nyb0x-fork)",
+  "description": "Misstter (t1nyb0x-fork)",
+  "version": "1.2.0",
 
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Misstter"
   },
 
   "icons": {
@@ -19,35 +20,32 @@
   },
 
   "content_scripts": [
-      {
-          "matches": [
-            "https://twitter.com/*",
-            "https://pro.twitter.com/*",
-            "https://x.com/*",
-            "https://pro.x.com/*"
-          ],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://pro.twitter.com/*",
+        "https://x.com/*",
+        "https://pro.x.com/*"
+      ],
+      "js": ["js/vendor.js", "js/content_script.js"]
+    }
   ],
 
   "background": {
-    "scripts": [
-      "js/background.js"
-    ]
+    "scripts": ["js/background.js"]
   },
 
-  "permissions": [
-    "storage",
-    "<all_urls>"
-  ],
+  "permissions": ["storage"],
 
-  "web_accessible_resources": [
-        "misskey_icon.png"
-  ],
+  "web_accessible_resources": ["misskey_icon.png"],
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "{d32ec88e-5884-4cc1-8358-30307da19549}"
+      "id": "{f491b6b5-155c-ec1c-88c2-093f3f18e299}",
+      "strict_min_version": "120.0"
+    },
+    "gecko_android": {
+      "strict_min_version": "120.0"
     }
   }
 }
